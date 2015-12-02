@@ -40,6 +40,9 @@
         </div>
         <div class="container body-content">
             @RenderBody()
+
+            <div id="appMountNode"></div>
+
             <hr />
             <footer>
                 <p>&copy; 2015 - VNextStacks</p>
@@ -49,7 +52,11 @@
         <environment names="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/js/site.js" asp-append-version="true"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>            
+            <script src="~/lib/react/react.js"></script>
+            <script src="~/lib/react/react-dom.js"></script>
+            <script src="~/lib/requirejs/require.js"></script>
+            <script src="~/js/mylibs/app.js" asp-append-version="true"></script>
         </environment>
         <environment names="Staging,Production">
             <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"

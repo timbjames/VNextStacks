@@ -5,7 +5,9 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "es5",
-    "outDir": "../wwwroot/js/mylibs"
+    "outDir": "../wwwroot/js/mylibs",
+    "jsx": "react",
+    "module": "amd"
   },
   "exclude": [
     "node_modules",
