@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6EB28845-9DF4-4B43-84FD-12AFE64D919F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4107A207-EF72-4F76-93EB-CC0ED784CEBF}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "VNextStacks", "src\VNextStacks\VNextStacks.xproj", "{87D7D82C-6D23-49F9-A69F-E65D39D09DC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87D7D82C-6D23-49F9-A69F-E65D39D09DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D7D82C-6D23-49F9-A69F-E65D39D09DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D7D82C-6D23-49F9-A69F-E65D39D09DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D7D82C-6D23-49F9-A69F-E65D39D09DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87D7D82C-6D23-49F9-A69F-E65D39D09DC9} = {6EB28845-9DF4-4B43-84FD-12AFE64D919F}
+	EndGlobalSection
+EndGlobal
