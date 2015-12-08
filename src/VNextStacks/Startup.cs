@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using VNextStacks.Models;
 using VNextStacks.Services;
+using Microsoft.AspNet.StaticFiles;
+using Microsoft.AspNet.FileProviders;
 
 namespace VNextStacks
 {
@@ -50,7 +52,7 @@ namespace VNextStacks
 
             services.AddMvc();
 
-            // Add application services.
+            // Add application services.            
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
         }
@@ -86,8 +88,13 @@ namespace VNextStacks
 
             app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear());
 
-            app.UseStaticFiles();
-
+            // add .tsx files as static files   
+            // http://docs.asp.net/en/latest/fundamentals/static-files.html         
+            var provider = new FileExtensionContentTypeProvider();
+            provider.Mappings.Add(".tsx", "application/javascript");
+            
+            app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = provider });
+            
             app.UseIdentity();
 
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
@@ -95,8 +102,12 @@ namespace VNextStacks
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "areaRoute",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");                
             });
         }
 

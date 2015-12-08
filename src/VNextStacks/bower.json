@@ -7,6 +7,7 @@
     "jquery-validation": "1.14.0",
     "jquery-validation-unobtrusive": "3.2.4",
     "react": "^0.14.3",
-    "requirejs": "^2.1.22"
+    "requirejs": "^2.1.22",
+    "director": "^1.2.8"
   }
 }

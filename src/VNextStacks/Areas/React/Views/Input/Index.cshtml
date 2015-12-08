@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "View";
+}
+
+@section head{
+    <style>
+        div.view {
+            width: 100%;
+            display: block;
+        }
+    </style>
+}
+
+<h1>Input test</h1>
+
+<div id="todoApp"></div>
+
+@section scripts{
+    @*<script src="~/js/mylibs/todoapp/utils.js"></script>
+        <script src="~/js/mylibs/todoapp/todomodel.js"></script>
+        <script src="~/js/mylibs/todoapp/todoitem.js"></script>
+        <script src="~/js/mylibs/todoapp/app.js"></script>*@
+    <script>        
+        System.import("js/mylibs/todoapp/app")        
+    </script>
+}
